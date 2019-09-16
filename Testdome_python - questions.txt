@@ -1,0 +1,137 @@
+1. File OwnersPYTHON LANGUAGE PUBLIC
+Implement a group_by_owners function that:
+
+• Accepts a dictionary containing the file owner name for each file name.
+• Returns a dictionary containing a list of file names for each owner name, in any order.
+For example, for dictionary {'Input.txt': 'Randy', 'Code.py': 'Stan', 'Output.txt': 'Randy'} the group_by_owners function should return {'Randy': ['Input.txt', 'Output.txt'], 'Stan': ['Code.py']}.
+
+
+
+2. Ice Cream MachinePYTHON COLLECTIONS PUBLIC NEW
+Implement the IceCreamMachine's scoops method so that it returns all combinations of one ingredient and one topping. If there are no ingredients or toppings, the method should return an empty list.
+
+For example, IceCreamMachine(["vanilla", "chocolate"], ["chocolate sauce"]).scoops() should return [['vanilla', 'chocolate sauce'], ['chocolate', 'chocolate sauce']].
+
+
+
+3. Merge NamesPYTHON LIST PUBLIC
+Implement the unique_names method. When passed two lists of names, it will return a list containing the names that appear in either or both lists. The returned list should have no duplicates.
+
+For example, calling unique_names(['Ava', 'Emma', 'Olivia'], ['Olivia', 'Sophia', 'Emma']) should return a list containing Ava, Emma, Olivia, and Sophia in any order.
+
+
+
+4. PalindromePYTHON STRINGS PUBLIC
+A palindrome is a word that reads the same backward or forward.
+
+Write a function that checks if a given word is a palindrome. Character case should be ignored.
+
+For example, is_palindrome("Deleveled") should return True as character case should be ignored, resulting in "deleveled", which is a palindrome since it reads the same backward and forward.
+
+
+
+5. Quadratic EquationPYTHON ARITHMETIC PUBLIC NEW
+Implement the function find_roots to find the roots of the quadratic equation: ax2 + bx + c = 0. The function should return a tuple containing roots in any order.
+
+The roots of the quadratic equation can be found with the following formula: A quadratic equation.
+
+For example, find_roots(2, 10, 8) should return (-1, -4) or (-4, -1) as the roots of the equation 2x2 + 10x + 8 = 0 are -1 and -4.
+
+
+
+6. Binary Search TreePYTHON ALGORITHMIC THINKING DATA STRUCTURES PUBLIC
+A three-node binary tree.Binary search tree (BST) is a binary tree where the value of each node is larger or equal to the values in all the nodes in that node's left subtree and is smaller than the values in all the nodes in that node's right subtree.
+
+Write a function that, efficiently with respect to time used, checks if a given binary search tree contains a given value.
+
+For example, for the following tree:
+
+n1 (Value: 1, Left: null, Right: null)
+n2 (Value: 2, Left: n1, Right: n3)
+n3 (Value: 3, Left: null, Right: null)
+Call to contains(n2, 3) should return True since a tree with root at n2 contains number 3.
+
+
+
+7. SongPYTHON ALGORITHMIC THINKING SEARCHING PUBLIC
+A playlist is considered a repeating playlist if any of the songs contain a reference to a previous song in the playlist. Otherwise, the playlist will end with the last song which points to None.
+
+Implement a function is_repeating_playlist that, efficiently with respect to time used, returns true if a playlist is repeating or false if it is not.
+
+For example, the following code prints "True" as both songs point to each other.
+
+first = Song("Hello")
+second = Song("Eye of the tiger")
+    
+first.next_song(second)
+second.next_song(first)
+    
+print(first.is_repeating_playlist())
+
+
+
+8. Two SumPYTHON ALGORITHMIC THINKING SEARCHING PUBLIC
+Write a function that, when passed a list and a target sum, returns, efficiently with respect to time used, two distinct zero-based indices of any two of the numbers, whose sum is equal to the target sum. If there are no two numbers, the function should return None.
+
+For example, find_two_sum([3, 1, 5, 7, 5, 9], 10) should return a single tuple containing any of the following pairs of indices:
+
+• 0 and 3 (or 3 and 0) as 3 + 7 = 10
+• 1 and 5 (or 5 and 1) as 1 + 9 = 10
+• 2 and 4 (or 4 and 2) as 5 + 5 = 10
+
+
+
+9. PipelinePYTHON CLOSURES PUBLIC
+As part of a data processing pipeline, complete the implementation of the pipeline method:
+
+• The method should accept a variable number of functions, and it should return a new function that accepts one parameter arg.
+• The returned function should call the first function in the pipeline with the parameter arg, and call the second function with the result of the first function.
+• The returned function should continue calling each function in the pipeline in order, following the same pattern, and return the value from the last function.
+
+For example, pipeline(lambda x: x * 3, lambda x: x + 1, lambda x: x / 2) then calling the returned function with 3 should return 5.0.
+
+
+
+10. League TablePYTHON COLLECTIONS SORTING PUBLIC
+The LeagueTable class tracks the score of each player in a league. After each game, the player records their score with the record_result function. 
+
+The player's rank in the league is calculated using the following logic:
+
+The player with the highest score is ranked first (rank 1). The player with the lowest score is ranked last.
+If two players are tied on score, then the player who has played the fewest games is ranked higher.
+If two players are tied on score and number of games played, then the player who was first in the list of players is ranked higher.
+Implement the player_rank function that returns the player at the given rank.
+
+For example:
+
+table = LeagueTable(['Mike', 'Chris', 'Arnold'])
+table.record_result('Mike', 2)
+table.record_result('Mike', 3)
+table.record_result('Arnold', 5)
+table.record_result('Chris', 5)
+print(table.player_rank(1))
+
+All players have the same score. However, Arnold and Chris have played fewer games than Mike, and as Chris is before Arnold in the list of players, he is ranked first. Therefore, the code above should display "Chris".
+
+
+
+11. PathPYTHON DATA STRUCTURES STRINGS PUBLIC
+Write a function that provides change directory (cd) function for an abstract file system.
+
+Notes:
+
+• Root path is '/'.
+• Path separator is '/'.
+• Parent directory is addressable as '..'.
+• Directory names consist only of English alphabet letters (A-Z and a-z).
+• The function should support both relative and absolute paths.
+• The function will not be passed any invalid paths.
+• Do not use built-in path-related functions.
+
+For example:
+
+path = Path('/a/b/c/d')
+path.cd('../x')
+print(path.current_path)
+
+should display '/a/b/c/x'.
